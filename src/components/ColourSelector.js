@@ -1,7 +1,7 @@
 import React from "react";
 
 const ColourSelector = (props) => {
-  const { config, selectNextBackground } = props;
+  const { key, config, selectNextBackground } = props;
   const { label, classname, background } = config;
 
   function fixBackground() {
@@ -10,7 +10,7 @@ const ColourSelector = (props) => {
   }
 
   return (
-    <button className={classname} onClick={fixBackground}>
+    <button className={classname} onClick={fixBackground} data-testid={key} >
       {label}
     </button>
   );
